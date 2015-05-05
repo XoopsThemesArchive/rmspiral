@@ -1,0 +1,18 @@
+<table class="blocks" cellspacing="1" cellpadding="0" width="100%">
+  <{foreach item=module from=$block.modules}>
+  <tr>
+    <td class="<{cycle values="menuEven, menuOdd"}>">
+      <!-- start module menu loop -->
+      <img src="<{$xoops_imageurl}>images/menus_sep.gif" align="absmiddle">&nbsp;<a href="<{$xoops_url}>/modules/<{$module.directory}>/"><{$module.name}></a>
+      <!-- end module menu loop -->
+    </td>
+  </tr>
+  <{foreach item=sublink from=$module.sublinks}>
+  <tr>
+    <td class="submenu">
+          <img src="<{$xoops_imageurl}>images/submenus_sep.gif" align="absmiddle">&nbsp;<a class="menuSub" href="<{$sublink.url}>"><{$sublink.name}></a>
+	</td>
+  </tr>
+  <{/foreach}>
+  <{/foreach}>
+</table>

@@ -1,0 +1,15 @@
+<table cellspacing="1" cellpadding="0" border="0" class="blocks" width="100%">
+  <tr><td class="menuEven" align="left"><img src="<{$xoops_imageurl}>images/menus_sep.gif" border="0" align="absmiddle">&nbsp;<a class="menuTop" href="<{$xoops_url}>/user.php"><{$block.lang_youraccount}></a></td></tr>
+  <tr><td class="menuOdd"><img src="<{$xoops_imageurl}>images/menus_sep.gif" border="0" align="absmiddle">&nbsp;<a href="<{$xoops_url}>/edituser.php"><{$block.lang_editaccount}></a></td></tr>
+  <tr><td class="menuEven"><img src="<{$xoops_imageurl}>images/menus_sep.gif" border="0" align="absmiddle">&nbsp;<a href="<{$xoops_url}>/notifications.php"><{$block.lang_notifications}></a></td></tr>
+  <tr><td class="menuOdd"><img src="<{$xoops_imageurl}>images/menus_sep.gif" border="0" align="absmiddle">&nbsp;<a href="<{$xoops_url}>/user.php?op=logout"><{$block.lang_logout}></a></td></tr>
+  <{if $block.new_messages > 0}>
+  <tr><td class="menuEven"><img src="<{$xoops_imageurl}>images/menus_sep.gif" border="0" align="absmiddle">&nbsp;<a class="highlight" href="<{$xoops_url}>/viewpmsg.php"><{$block.lang_inbox}> (<span style="color:#ff0000; font-weight: bold;"><{$block.new_messages}></span>)</a></td><tr></tr>
+  <{else}>
+  <tr><td class="menuOdd"><img src="<{$xoops_imageurl}>images/menus_sep.gif" border="0" align="absmiddle">&nbsp;<a href="<{$xoops_url}>/viewpmsg.php"><{$block.lang_inbox}></a></td></tr>
+  <{/if}>
+
+  <{if $xoops_isadmin}>
+  <tr><td class="menuEven"><img src="<{$xoops_imageurl}>images/menus_sep.gif" border="0" align="absmiddle">&nbsp;<strong><a href="<{$xoops_url}>/admin.php"><{$block.lang_adminmenu}></a></strong></td></tr>
+  <{/if}>
+</table><br />
